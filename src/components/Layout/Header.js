@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <Fragment>
       <header className={classes.header}>
-          <h1>FoodApp</h1>
+          <h1>OrderFood</h1>
           <CartButton name="Your Cart"/>
       </header>
       <div className={classes['main-image']}>
