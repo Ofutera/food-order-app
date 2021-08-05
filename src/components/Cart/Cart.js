@@ -1,12 +1,19 @@
-import React, { Fragment } from "react";
+import React from "react";
 import classes from "./Cart.module.css";
+import Modal from "../UI/Modal";
 
 const Cart = () => {
+  const cartItems = (
+    <ul className={classes["cart-items"]}>
+      {[{ id: "c1", name: "Sushi", amount: 2, price: 12.99 }].map((item) => {
+        return <li>{item.name}</li>;
+      })}
+    </ul>
+  );
+
   return (
-    <Fragment>
-      <div className={classes["cart-items"]}>
-        <span>Sushi</span>
-      </div>
+    <Modal>
+      <div>{cartItems}</div>
       <div className={classes.total}>
         <span>Total Amount</span>
         <span>12.99</span>
@@ -15,7 +22,7 @@ const Cart = () => {
         <button className={classes["button--alt"]}>Close</button>
         <button className={classes.button}>Order</button>
       </div>
-    </Fragment>
+    </Modal>
   );
 };
 
