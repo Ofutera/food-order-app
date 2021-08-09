@@ -6,12 +6,16 @@ import mealsImg from "../../assets/food-table.jpg";
 
 
 
-const Header = () => {
+const Header = (props) => {
+
+  
+
+  
   return (
     <Fragment>
       <header className={classes.header}>
           <h1>OrderFood</h1>
-          <CartButton name="Your Cart"/>
+          <CartButton name="Your Cart" onClick={props.onShowCart}/>
       </header>
       <div className={classes['main-image']}>
           <img src= {mealsImg} alt="A table with food."/>
